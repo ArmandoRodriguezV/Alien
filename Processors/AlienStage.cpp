@@ -22,7 +22,7 @@ void AlienStage::prepare(const juce::dsp::ProcessSpec& spec)
     updateCoefficients();
 }
 
-void AlienStage::setFrequency(float f) {
+void AlienStage::setFrequency(const float f) {
     frequency = juce::jlimit(20.0f, 20000.0f, f);
     updateCoefficients();
 }
