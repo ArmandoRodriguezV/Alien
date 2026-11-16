@@ -9,7 +9,7 @@ AlienAudioProcessorEditor::AlienAudioProcessorEditor (AlienAudioProcessor& p)
     auto svg = juce::XmlDocument::parse(BinaryData::AlienLogo_svg);
 
     if (svg != nullptr)
-        logo = juce::Drawable::createFromSVG(*svg);
+        logo = juce::Drawable::createFromImageData(BinaryData::AlienLogo_svg, BinaryData::AlienLogo_svgSize);
 
     startTimerHz(60);
     addAndMakeVisible(mainEditor);

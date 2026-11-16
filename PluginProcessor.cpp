@@ -161,7 +161,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout AlienAudioProcessor::paramet
     params.push_back(std::make_unique<juce::AudioParameterFloat>(
         "FREQUENCY_ID",
         "Frequency",
-        juce::NormalisableRange<float>(20.0f, 20000.0f, 0.001f),
+        juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.25f),
         800.0f));
 
     params.push_back(std::make_unique<juce::AudioParameterFloat>(
